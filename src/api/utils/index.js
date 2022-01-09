@@ -19,7 +19,7 @@ const buildSuccessResponse = body => ({
 });
 
 const errorMiddleware = (ctx, next) => next()
-  .catch((error) => {
+  .catch(error => {
     console.error(error);
     setResponse(ctx, buildErrorResponse(500, 'INTERNAL_SERVER_ERROR', error.message));
   });
