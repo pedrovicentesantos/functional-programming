@@ -1,0 +1,25 @@
+{
+  "name": "functional-programming",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "api": "docker-compose -f src/api/docker-compose.yaml up -d --build api",
+    "api:status": "docker-compose -f src/api/docker-compose.yaml ps",
+    "api:kill": "docker-compose -f src/api/docker-compose.yaml down"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "nodemon": "^2.0.7",
+    "p-map": "^4.0.0",
+    "ramda": "^0.27.1"
+  }
+}

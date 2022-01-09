@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    command: npm start
+    ports:
+      - 3000:3000
+    environment:
+      - PORT=3000
+      - AUTH_USERNAME=pedro
+      - AUTH_PASSWORD=senha
+      - AUTH_TOKEN_EXPIRATION=1min
+      - AUTH_TOKEN_SECRET=tokensecreto
