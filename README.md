@@ -1,6 +1,8 @@
 # Repositório
 
-Baseado no seguinte [repositório](https://github.com/rodrigobotti/rs-ws-2020-fp), com o objetivo de aplicar alguns conceitos de programação funcional. Além de aplicar os conceitos aprendidos em uma API.
+Baseado no seguinte [repositório](https://github.com/rodrigobotti/rs-ws-2020-fp), com o objetivo de aplicar alguns conceitos de programação funcional. Além de aplicar os conceitos aprendidos na criação de um crawler, que está na pasta `concepts` do projeto.
+
+O crawler consome uma API criada em Node.js, que está na pasta `api` do projeto.
 
 ## Rodando a aplicação
 
