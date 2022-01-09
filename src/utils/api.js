@@ -1,6 +1,5 @@
 const R = require('ramda');
 const axios = require('axios');
-
 const {
   delayed,
   then,
@@ -38,9 +37,9 @@ const listAllTvShowsIds = (tvShowsIds, { categoryId, cursor }) => (R.isNil(curso
       return listAllTvShowsIds(tvShowsIds.concat(ids), { categoryId, cursor: nextCursor });
     }));
 
-const listTvShowIds = (categoryId) => listAllTvShowsIds([], { categoryId, cursor: 0 });
+const listTvShowIds = categoryId => listAllTvShowsIds([], { categoryId, cursor: 0 });
 
-const getTvShowRequestConfig = (tvShowId) => ({
+const getTvShowRequestConfig = tvShowId => ({
   method: 'get',
   url: `http://localhost:3000/api/tv-shows/${tvShowId}`,
 });

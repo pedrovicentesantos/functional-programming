@@ -8,11 +8,11 @@ const concurrently = R.curry((concurrency, mapper, xs) => pMap(xs, mapper, { con
 const append = R.curry((xs, x) => xs.concat([x]));
 
 const serially = R.curry((mapper, xs) => xs.reduce(
-  (promise, x) => promise.then((acc) => mapper(x).then(append(acc))),
+  (promise, x) => promise.then(acc => mapper(x).then(append(acc))),
   Promise.resolve([]),
 ));
 
-const delay = time => new Promise((resolve) => setTimeout(resolve, time));
+const delay = time => new Promise(resolve => setTimeout(resolve, time));
 
 const delayed = R.curry((time, value) => delay(time).then(R.always(value)));
 

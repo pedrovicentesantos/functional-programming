@@ -1,5 +1,4 @@
 const { getTvShow, listCategories, listTvShows } = require('../data');
-
 const {
   setResponse,
   buildSuccessResponse,

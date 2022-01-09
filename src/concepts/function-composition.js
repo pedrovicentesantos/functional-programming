@@ -8,7 +8,7 @@ const { curry } = require('./curry');
 // pseudo código: const f = compose(f1, f2, ..., fx)
 // Executa da última função para primeira
 
-const compose = (...fns) => (x) => fns.reduceRight((y, f) => f(y), x);
+const compose = (...fns) => x => fns.reduceRight((y, f) => f(y), x);
 
 // Custom pipe
 // h = f |> g
@@ -16,7 +16,7 @@ const compose = (...fns) => (x) => fns.reduceRight((y, f) => f(y), x);
 // f = f1 |> f2 |> (...) |> fN
 // pseudo código: f(x) = fN(...f2(f1(x)...))
 // Igual ao compose mas executa da esquerda para direita (da primeira para ultima)
-const pipe = (...fns) => (x) => fns.reduce((y, f) => f(y), x);
+const pipe = (...fns) => x => fns.reduce((y, f) => f(y), x);
 
 // Array manipulation
 const map = curry((mapper, xs) => xs.map(mapper));
