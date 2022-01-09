@@ -1,8 +1,8 @@
 const Koa = require('koa');
 const Router = require('koa-router');
 const bodyParser = require('koa-bodyparser');
-const { errorMiddleware } = require('./utils/utils');
-const { categoriesHandler, tvShowsHandler, tvShowsDetailHandler } = require('./handlers/handlers');
+const { errorMiddleware } = require('../utils');
+const { categoriesHandler, tvShowsHandler, tvShowsDetailHandler } = require('../handlers');
 
 const router = new Router();
 const app = new Koa();

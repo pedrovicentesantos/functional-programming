@@ -2,7 +2,7 @@ const { getTvShow, listCategories, listTvShows } = require('../data');
 const {
   setResponse,
   buildSuccessResponse,
-} = require('../utils/utils');
+} = require('../utils');
 
 const categoriesHandler = ctx => {
   const categories = listCategories();
